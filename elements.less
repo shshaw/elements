@@ -97,6 +97,11 @@
   -moz-transition: all @duration @ease;
   transition: all @duration @ease;
 }
+.transition-property(@property:all, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition:@property @duration @ease;
+  transition:@property @duration @ease;
+}
 .inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
   -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
   -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
@@ -133,4 +138,9 @@
   -o-transform: translate(@x, @y);
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
+}
+.user-select(@option: none){
+   -moz-user-select: @option;
+-webkit-user-select: @option;
+		user-select: @option;
 }
